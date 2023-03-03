@@ -1,2 +1,2 @@
-# l5-ci536-group-project
+# CI536 Group Project - University Marketplace
 University marketplace for CI536 group project.

@@ -7,4 +7,4 @@
 //  } else {
 //    dropdownMenu.style.display = "none";
 //  }
-//});
+//}); I tried to do a dropdown menu but couldnt get it to work

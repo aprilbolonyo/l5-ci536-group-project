@@ -11,22 +11,27 @@ body {
 
 header {
 	background-color: #7bc6df;
-	background-image: url(../assets/brighton-logo.jpg);
-	background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-	height: 20vh;
-	color: #000000;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	display: grid;
 	text-align: center;
+	grid-template-columns: 2;
+	grid-template-rows: 1;
+	grid-template-areas: "logo title";
 }
 
-.banner {
+header img {
+	height: 100%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	grid-area: logo;
+}
+
+#banner {
     padding: 10px;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+	align-items: center;
 	padding: 20px;
+	grid-area: title;
 }
 
 .banner h1 {
@@ -61,6 +66,7 @@ header {
 #dropdown-btn, #search-btn {
 	background: #7bc6df;
     width: 5%;
+	min-width: 4rem;
     border-radius: 10px;
     position: relative;
     cursor: pointer;
@@ -72,7 +78,7 @@ header {
 }
 
 #search-btn img {
-	max-width: 75%;
+	width: 100%;
 }
 
 #dropdown-menu {
@@ -90,14 +96,6 @@ header {
 
 #dropdown-menu a:hover {
 	background-color: #ddd;
-}
-
-.fa-solid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 22px;
 }
 
 .cards {
@@ -127,6 +125,7 @@ header {
 	margin-bottom: 10px;
 	margin-left: auto;
 	margin-right: auto;
+	max-width: 100%;
 	display: block;
 }
 
@@ -139,4 +138,16 @@ header {
 
 .hide {
 	display: none;
+}
+
+@media (max-width: 35em) {
+	.card {
+		width: 90%;
+	}
+}
+
+@media (max-width: 60em) {
+	.card {
+		width: 40%;
+	}
 }

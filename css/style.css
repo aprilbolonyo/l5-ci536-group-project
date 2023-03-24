@@ -1,0 +1,135 @@
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #7bc6df;
+	background-image: url(../images/brighton-logo.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+	height: 20vh;
+	color: #000000;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+.banner {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+	padding: 20px;
+}
+
+.banner h1 {
+	font-size: 60px;
+	font-weight: bold;
+  	padding: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    width: 50%;
+    padding: 15px 20px;
+    border-color: #333;
+    border-radius: 10px;
+    font-weight: bold;
+	cursor: text;
+}
+
+.SearchButton {
+    background: #7bc6df;
+    width: 5%;
+    border-radius: 10px;
+	padding: 15px 20px;
+    position: relative;
+    cursor: pointer;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.dropdown-btn {
+	background: #7bc6df;
+    width: 5%;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+/*#dropdown-menu {
+	display: none;
+	position: absolute;
+	z-index: 1;
+}
+
+#dropdown-menu a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: black;
+	background-color: #f2f2f2;
+}
+
+#dropdown-menu a:hover {
+	background-color: #ddd;
+}*/
+
+.fa-solid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 50px auto 0;
+	width: 80%;
+}
+
+.card {
+	background-color: #7bc6df;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	margin: 20px;
+	padding: 20px;
+	width: calc(33.33% - 40px);
+}
+
+.card h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+    justify-content: center;
+	text-align: center;
+}
+
+.card img {
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.card p {
+	font-size: 16px;
+	line-height: 1.4;
+    justify-content: center;
+	text-align: center;
+}

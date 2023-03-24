@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
 	<title>Uni Trade - Home</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="normalize" type="text/css" href="css/normalize.css">
+	<meta charset="utf-8">	
+    <meta name="viewport" content="width=device-width">
 	<script src="https://kit.fontawesome.com/47be3f4327.js"></script>
 </head>
 <body>
@@ -14,12 +16,14 @@
 	</header>
 	<main>
 		<div class="wrapper">
-			<input type="text" class="input" placeholder="Search for an item..." id="search-bar">
+			<input type="search" aria-label="Item search" class="input" placeholder="Search for an item..." id="search-bar">
             <button id="search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <img src="assets/search.svg" alt="Search">
+				Search
             </button>
 			<button id="dropdown-btn">
-				<i class="fa-solid fa-bars"></i>
+				<img src="assets/menu.svg" alt="Menu">
+				Menu
 			</button>
 		</div>
 		<div id="dropdown-menu" class="hide">

@@ -11,7 +11,7 @@ body {
 
 header {
 	background-color: #7bc6df;
-	background-image: url(../images/brighton-logo.jpg);
+	background-image: url(../assets/brighton-logo.jpg);
 	background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -53,22 +53,26 @@ header {
 }
 
 #search-btn {
-    background: #7bc6df;
-    width: 5%;
-    border-radius: 10px;
 	padding: 15px 20px;
-    position: relative;
-    cursor: pointer;
 	margin-right: 10px;
 	margin-left: 10px;
 }
 
-#dropdown-btn {
+#dropdown-btn, #search-btn {
 	background: #7bc6df;
     width: 5%;
     border-radius: 10px;
     position: relative;
     cursor: pointer;
+	font-size: 0;
+}
+
+#dropdown-btn img {
+	max-width: 50%;
+}
+
+#search-btn img {
+	max-width: 75%;
 }
 
 #dropdown-menu {

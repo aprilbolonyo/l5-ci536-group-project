@@ -1,10 +1,8 @@
-//var dropdownBtn = document.getElementById("dropdown-btn");
-//var dropdownMenu = document.getElementById("dropdown-menu");
+window.addEventListener("load", function () {
+    const dropdownBtn = document.querySelector("#dropdown-btn"),
+        dropdownMenu = document.querySelector("#dropdown-menu");
 
-//dropdownBtn.addEventListener("click", function() {
-//  if (dropdownMenu.style.display === "none") {
-//    dropdownMenu.style.display = "block";
-//  } else {
-//    dropdownMenu.style.display = "none";
-//  }
-//}); I tried to do a dropdown menu but couldnt get it to work
+    dropdownBtn.addEventListener("click", function () {
+        dropdownMenu.classList.toggle("hide");
+    });
+});

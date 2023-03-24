@@ -52,7 +52,7 @@ header {
 	cursor: text;
 }
 
-.SearchButton {
+#search-btn {
     background: #7bc6df;
     width: 5%;
     border-radius: 10px;
@@ -63,7 +63,7 @@ header {
 	margin-left: 10px;
 }
 
-.dropdown-btn {
+#dropdown-btn {
 	background: #7bc6df;
     width: 5%;
     border-radius: 10px;
@@ -71,8 +71,7 @@ header {
     cursor: pointer;
 }
 
-/*#dropdown-menu {
-	display: none;
+#dropdown-menu {
 	position: absolute;
 	z-index: 1;
 }
@@ -87,7 +86,7 @@ header {
 
 #dropdown-menu a:hover {
 	background-color: #ddd;
-}*/
+}
 
 .fa-solid {
     position: absolute;
@@ -132,4 +131,8 @@ header {
 	line-height: 1.4;
     justify-content: center;
 	text-align: center;
+}
+
+.hide {
+	display: none;
 }

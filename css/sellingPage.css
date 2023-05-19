@@ -1,0 +1,383 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-color: #7bc6df;
+  display: flex;
+  text-align: center;
+  /* 	justify-content: space-between; */
+  align-items: center;
+  padding: 20px;
+}
+
+header img {
+  height: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#banner {
+  padding-left: 50px;
+  text-align: center;
+}
+
+#banner h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 15px 20px;
+  max-width: 400px;
+  height: 50px;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: text;
+  outline: none;
+}
+
+#dropdown-btn,
+#search-btn {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  min-width: 4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  margin-left: 10px;
+}
+
+#search-btn img,
+#dropdown-btn img {
+  width: 70%;
+  height: auto;
+}
+
+#dropdown-menu {
+  position: fixed;
+  z-index: 1;
+  margin-left: 15px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+#dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+#dropdown-menu a:hover {
+  background-color: #7bc6df;
+  color: #fff;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: #7bc6df;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  padding: 20px;
+  width: calc(33.33% - 40px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cards-header {
+    margin-top: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card img {
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.4;
+  justify-content: center;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 35em) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 60em) {
+  .card {
+    width: 40%;
+  }
+}
+
+Additional styles for the profile page
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profile-location {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.profile-rating {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.profile-bio {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+.stars {
+  font-size: 24px;
+  color: rgb(188, 170, 69);
+}
+
+.items-sold {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards-header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* Selling Page */
+
+.cardsSelling {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cardSelling {
+  background-color: #7bc6df;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 5px;
+  padding: 10px;
+  width: calc(90% - 10px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cardDetails {
+  background-color: #36bbe7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px;
+  width: calc(100% - 10px);
+  height: fit-content;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cardUpload {
+  background-color: #36bbe7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(95% - 10px);
+  height: calc(30%);
+  border-radius: 10px;
+  display: inline;
+  align-content: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.cardSelling h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cardUpload img {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 35%;
+  max-width: 35%;
+  display: flex;
+  
+}
+.cardUpload h2 {
+ padding: 20px;
+}
+.cardDetails img {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  max-width: 150px;
+  display: flex;
+}
+.uploadButton:hover {
+  box-shadow: 0 0 5px rgba(1, 1, 1, 1.5);
+  cursor: pointer;
+}
+
+.cardSelling p {
+  font-size: 16px;
+  line-height: 1.4;
+  justify-content: center;
+  text-align: center;
+}
+.form {
+	text-align: center;
+	display: block;
+	box-shadow: 0 0 45px -10px #000;
+  width: 65%;
+  padding: 20px;
+  border-radius: 20px;
+}
+.form1 {
+	display: inline-block;
+	text-align: left;
+  margin: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+label {
+	display: block;
+}
+#description {
+  height: 200px;
+}
+
+input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  height: 35px;
+	width: 95%;
+  margin: 10px;
+
+}
+textarea {
+  display: block;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+}
+#submit-btn {
+  margin-top: 10px;
+  height: 50px;
+  width: 100%;
+}
+
+input[type="radio"] {
+	
+}
+.hide {
+  display: none;
+}
+
+@media (max-width: 35em) {
+  .cardSelling {
+    width: 90%;
+  }
+}
+
+@media (max-width: 60em) {
+  .cardSelling {
+    width: 40%;
+  }
+}

@@ -363,21 +363,70 @@ textarea {
   width: 100%;
 }
 
-input[type="radio"] {
-	
-}
 .hide {
   display: none;
 }
-
-@media (max-width: 35em) {
+@media (max-width: 20em) {
+  .cardsSelling {
+    width: 30%;
+  }
   .cardSelling {
-    width: 90%;
+    width: 30%;
+  }
+  .cardDetails {
+    width: 30%;
+  }
+  .cardUpload {
+    width: 30%;
+  }
+  .form {
+    width: 30%;
+  }
+  .form1 {
+    width: 30%;
+  }
+  
+}
+@media (max-width: 35em) {
+  .cardsSelling {
+    width: 40%;
+  }
+  .cardSelling {
+    width: 40%;
+  }
+  .cardDetails {
+    width: 100%;
+    padding: 0;
+    padding-top: 5px;
+  }
+  .cardUpload {
+    width: 40%;
+  }
+  .form {
+    width: 100%;
+  }
+  .form1 {
+    width: 40%;
   }
 }
 
 @media (max-width: 60em) {
+  .cardsSelling {
+    width: 90%;
+  }
   .cardSelling {
-    width: 40%;
+    width: 90%;
+  }
+  .cardDetails {
+    width: 90%;
+  }
+  .cardUpload {
+    width: 90%;
+  }
+  .form {
+    width: 90%;
+  }
+  .form1 {
+    width: 90%;
   }
 }

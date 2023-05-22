@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #7bc6df;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  header img {
+    height: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #banner {
+    padding-left: 50px;
+    text-align: center;
+  }
+  
+  #banner h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  /* #cart-items {
+    list-style: none;
+    padding: 0;
+  }
+
+  #cart-items li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  }
+
+  #cart-items img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 4px;
+  } */
+
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  form input[type="submit"] {
+    background-color: #7bc6df;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  form input[type="submit"]:hover {
+    background-color: #64a6bf;
+  }
+
+  .thank-you-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+  }

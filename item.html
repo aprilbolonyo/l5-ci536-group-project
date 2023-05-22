@@ -2,13 +2,60 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/cartstyle.css">
 	<link rel="normalize" type="text/css" href="./css/normalize.css">
 </head>
 <body>
+	
     <header>
-		<div class="banner">
+		<img src="assets/brighton-logo-square.jpg" alt="University of Brighton logo">
+		<div id="banner">
 			<h1>Uni Trade</h1>
 		</div>
 	</header>
+	<div class="container">
+  <h2>You have selected "..." Please enter your details below.</h2>
+  <!-- <ul id="cart-items">
+    JAVASCRIPT STUFF -->
+  <!-- </ul> -->
+
+  <h2>Shipping Information:</h2>
+  <form id="shipping-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br>
+
+    <input type="submit" value="Order via PayPal">
+	<input type="submit" value="Order now, pay later (Cash)">
+	<!-- maybe sent an email confirmation for cash option?  -->
+  </form>
+  <script>
+    // PayPal integration and javascript
+  </script>
+  <!-- thank you javascript -->
+  <script>
+    function displayThankYou() {
+      var thankYouMessage = document.createElement("div");
+      thankYouMessage.className = "thank-you-message";
+      thankYouMessage.textContent = "Thanks for your order!";
+      document.body.appendChild(thankYouMessage);
+
+      setTimeout(function() {
+        document.body.removeChild(thankYouMessage);
+      }, 3000);
+    }
+
+    var payLaterButton = document.querySelector('input[value="Order now, pay later (Cash)"]');
+    payLaterButton.addEventListener("click", function(event) {
+      event.preventDefault(); 
+      displayThankYou();
+    });
+  </script>
+  </div>
 </body>
+</html>

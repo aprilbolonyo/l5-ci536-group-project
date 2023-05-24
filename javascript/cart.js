@@ -11,9 +11,9 @@ const app = express();
 
 const getAccessToken = async () => {
 
-  const clientId = "<test>";
+  const clientId = "AU-RgqQCS6L9X8K9ARffqy2exPrHByegNOqT9Fm3ihXz8GJlZyK0KlMrUyYHue4EAudQHpxM5XEVxKBw";
 
-  const appSecret = "<test_secret>";
+  const appSecret = "EBvbryoRvwk5qxNJyd1KtCUPDXGMdTwx8x3u3Jc0WS5uzi7sNo4Dq6wUTFpj0YfzVF3ApZFq6aQJn0wE";
 
   const url = "https://api-m.sandbox.paypal.com/v1/oauth2/token";
 
@@ -54,7 +54,7 @@ const createOrder = async () => {
 
         amount: {
 
-          currency_code: "USD",
+          currency_code: "GPB",
 
           value: "0.02",
 
@@ -165,18 +165,18 @@ app.listen(9597, () => {
 
 // Thank you message
 function displayThankYou() {
-    var thankYouMessage = document.createElement("div");
-    thankYouMessage.className = "thank-you-message";
-    thankYouMessage.textContent = "Thanks for your order!";
-    document.body.appendChild(thankYouMessage);
-  
-    setTimeout(function() {
-      document.body.removeChild(thankYouMessage);
-    }, 3000);
-  }
-  
-  var payLaterButton = document.querySelector('input[value="Order now, pay later (Cash)"]');
-  payLaterButton.addEventListener("click", function(event) {
-    event.preventDefault(); 
-    displayThankYou();
-  });
+  var thankYouMessage = document.createElement("div");
+  thankYouMessage.className = "thank-you-message";
+  thankYouMessage.textContent = "Thanks for your order!";
+  document.body.appendChild(thankYouMessage);
+
+  setTimeout(function () {
+    document.body.removeChild(thankYouMessage);
+  }, 3000);
+}
+
+var payLaterButton = document.querySelector('input[value="Order now, pay later (Cash)"]');
+payLaterButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  displayThankYou();
+});

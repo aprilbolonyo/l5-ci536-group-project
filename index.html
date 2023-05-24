@@ -41,17 +41,22 @@
 		  </div>
 		<section class="cards">
 			<div class="card">
-					<h2>Showcase item 1</h2>
-                	<img src="https://picsum.photos/200/300" alt="Card Image">
-					<h2 class="items-sold">£12.50</h2>
-					<p class="profile-name">John Smith</p>
-					<p class="profile-rating">
-						User Rating:
-						<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-            <p class="profile-location">Brighton, UK</p>
-            <p class="profile-bio"><i>A nice t-shirt</p></i>
-					<a href="item.html"><input type="submit" value="Contact the seller"></a>
+				<h2>Showcase item 1</h2>
+                <img src="https://picsum.photos/200/300" alt="Card Image">
+				<h2 class="items-sold">£12.50</h2>
+				<p class="profile-name">John Smith</p>
+				<p class="profile-rating">
+					User Rating:
+					<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            	<p class="profile-location">Brighton, UK</p>
+            	<p class="profile-bio"><i>A nice t-shirt</p></i>
+				<a href="item.html"><input type="submit" value="Contact the seller"></a>
 				</p>
+				<script>
+					const title = "Showcase item 1";
+					const titleString = JSON.stringify(title);
+					localStorage.setItem('objectTitle', titleString);
+				</script>
 			</div>
 			<div class="card">
 				<h2>Showcase item 2</h2>

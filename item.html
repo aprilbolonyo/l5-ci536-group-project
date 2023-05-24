@@ -35,10 +35,13 @@
     </div>
   </div>
   <div class="container">
-    <h2>You have selected "..." Please enter your details below.</h2>
-    <!-- <ul id="cart-items">
-    JAVASCRIPT STUFF -->
-    <!-- </ul> -->
+    <h2>You have selected <span id="title2"></span> Please enter your details below.</h2>
+    <script>
+      const titleString2 = localStorage.getItem('objectTitle');
+      const title2 = JSON.parse(titleString2);
+      document.getElementById("title2").innerHTML = title2;
+  </script>
+  
 
     <h2>Shipping Information:</h2>
     <form id="shipping-form">

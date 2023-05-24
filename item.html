@@ -1,184 +1,110 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/cartstyle.css" />
+    <link rel="normalize" type="text/css" href="./css/normalize.css" />
+    <link rel="shortcut icon" href="assets/brighton-logo-square.jpg" />
+  </head>
 
-<head>
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="./css/cartstyle.css">
-  <link rel="normalize" type="text/css" href="./css/normalize.css">
-  <link rel="shortcut icon" href="assets/brighton-logo-square.jpg">
-</head>
-
-<body>
-
-  <header>
-    <a href="index.html"><img src="assets/brighton-logo-square.jpg" alt="University of Brighton logo" /></a>
-    <div id="banner">
-      <h1>Uni Trade</h1>
-    </div>
-
-  </header>
-  <div class="wrapper">
-    <input type="search" aria-label="Item search" class="input" placeholder="Search for an item..." id="search-bar" />
-    <button id="search-btn">
-      <img src="assets/search.svg" alt="Search" />
-      Search
-    </button>
-    <div class="dropdown">
-      <button id="dropdown-btn">
-        <img src="assets/menu.svg" alt="Menu" />
-        Menu
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="assets/brighton-logo-square.jpg"
+          alt="University of Brighton logo"
+        />
+      </a>
+      <div id="banner">
+        <h1>Uni Trade</h1>
+      </div>
+    </header>
+    <div class="wrapper">
+      <input
+        type="search"
+        aria-label="Item search"
+        class="input"
+        placeholder="Search for an item..."
+        id="search-bar"
+      />
+      <button id="search-btn">
+        <img src="assets/search.svg" alt="Search" />
+        Search
       </button>
-      <div id="dropdown-menu" class="">
-        <a href="profile.html">Profile</a>
-        <a href="sell.html">Sell</a>
+      <div class="dropdown">
+        <button id="dropdown-btn">
+          <img src="assets/menu.svg" alt="Menu" />
+          Menu
+        </button>
+        <div id="dropdown-menu" class="">
+          <a href="profile.html">Profile</a>
+          <a href="sell.html">Sell</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <h2>You have selected <span id="title2"></span> Please enter your details below.</h2>
-    <script>
-      const titleString2 = localStorage.getItem('objectTitle');
-      const title2 = JSON.parse(titleString2);
-      document.getElementById("title2").innerHTML = title2;
-  </script>
-  
-
-    <h2>Shipping Information:</h2>
-    <form id="shipping-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required><br>
-
-      <label for="address">Address:</label>
-      <input type="text" id="address" required><br>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" required><br>
-
-      <!-- <input type="submit" value="Order via PayPal">
-      <input type="submit" value="Order now, pay later (Cash)"> -->
-
-      <!-- maybe sent an email confirmation for cash option?  -->
-
-    </form>
-
-    <script data-sdk-integration-source="integrationbuilder_ac"></script>
-
-    <div id="paypal-button-container"></div>
-
-    <script
-      src="https://www.paypal.com/sdk/js?client-id=AU-RgqQCS6L9X8K9ARffqy2exPrHByegNOqT9Fm3ihXz8GJlZyK0KlMrUyYHue4EAudQHpxM5XEVxKBw"></script>
-
-    <script>
-
-      const FUNDING_SOURCES = [
-
-        paypal.FUNDING.PAYPAL,
-
-        paypal.FUNDING.CARD
-
-      ];
-
-      FUNDING_SOURCES.forEach(fundingSource => {
-
-        paypal.Buttons({
-
-          fundingSource,
-
-          style: {
-
-            layout: 'horizontal',
-
-            shape: 'rect',
-
-            color: (fundingSource == paypal.FUNDING.PAYLATER) ? 'gold' : '',
-
-          },
-
-          createOrder: async (data, actions) => {
-
-            const response = await fetch("/orders", {
-
-              method: "POST",
-
-            });
-
-            const details = await response.json();
-
-            return details.id;
-
-          },
-
-
-
-          onApprove: async (data, actions) => {
-
-            const response = await fetch(`/orders/${data.orderID}/capture`, {
-
-              method: "POST",
-
-            });
-
-            const details = await response.json();
-
-            // Three cases to handle:
-
-            //   (1) Recoverable INSTRUMENT_DECLINED -> call actions.restart()
-
-            //   (2) Other non-recoverable errors -> Show a failure message
-
-            //   (3) Successful transaction -> Show confirmation or thank you
-
-
-            // This example reads a v2/checkout/orders capture response, propagated from the server
-
-            // You could use a different API or structure for your 'orderData'
-
-
-            const errorDetail = Array.isArray(details.details) && details.details[0];
-
-            if (errorDetail && errorDetail.issue === 'INSTRUMENT_DECLINED') {
-
-              return actions.restart(); // Recoverable state, per:
-
-              // https://developer.paypal.com/docs/checkout/integration-features/funding-failure/
-
-            }
-
-
-            if (errorDetail) {
-
-              let msg = 'Sorry, your transaction could not be processed.';
-
-              if (errorDetail.description) msg += '\n\n' + errorDetail.description;
-
-              if (details.debug_id) msg += ' (' + details.debug_id + ')';
-
-              return alert(msg); // Show a failure message (try to avoid alerts in production environments)
-
-            }
-
-
-            // Successful capture! For demo purposes:
-
-            console.log('Capture result', details, JSON.stringify(details, null, 2));
-
-            const transaction = details.purchase_units[0].payments.captures[0];
-
-            alert('Transaction ' + transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
-
-          },
-
-        })
-
+    <div class="container">
+      <h2>
+        You have selected <span id="title2"></span> Please enter your details
+        below.
+      </h2>
+      <script>
+        const titleString2 = localStorage.getItem("objectTitle");
+        const title2 = JSON.parse(titleString2);
+        document.getElementById("title2").innerHTML = title2;
+      </script>
+
+      <h2>Shipping Information:</h2>
+      <form id="shipping-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required /><br />
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" required /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required /><br />
+        <!-- 
+        <input type="submit" value="Order via PayPal" id="paypal-order-btn">
+        <input type="submit" value="Order now, pay later (Cash)" id="cash-order-btn"> -->
+      </form>
+
+      <div id="paypal-button-container">
+
+      <script src="https://www.paypal.com/sdk/js?client-id=AU-RgqQCS6L9X8K9ARffqy2exPrHByegNOqT9Fm3ihXz8GJlZyK0KlMrUyYHue4EAudQHpxM5XEVxKBw"></script>
+      <script>
+        document
+          .getElementById("shipping-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+        
+          });
+
+        paypal
+          .Buttons({
+            createOrder: function (data, actions) {
+             
+              return actions.order.create({
+                purchase_units: [
+                  {
+                    amount: {
+                      value: "0.02",
+                    },
+                  },
+                ],
+              });
+            },
+            onApprove: function (data, actions) {
+             
+              return actions.order.capture().then(function (details) {
+                console.log(details);
+                  // thank you message?? 
+                  // email receipt? 
+              });
+            },
+          })
           .render("#paypal-button-container");
-
-      })
-
-
-    </script>
-
-    <script src="./javascript/cart.js"></script>
-  </div>
-</body>
-
+      </script>
+      </div>
+    </div>
+  </body>
 </html>

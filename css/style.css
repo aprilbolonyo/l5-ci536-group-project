@@ -227,3 +227,50 @@ header img {
   text-align: center;
   margin-bottom: 20px;
 }
+/* 
+MESSING AROUND WITH THE CARD DISPLAY */
+
+.item-name {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.item-description {
+	color: #777;
+	margin-bottom: 10px;
+}
+
+.item-price {
+	font-weight: bold;
+}
+
+.seller-info {
+	margin-top: 10px;
+}
+
+.seller-name {
+	font-size: 14px;
+	color: #777;
+	margin-bottom: 5px;
+}
+
+.seller-rating {
+	font-size: 14px;
+	color: #777;
+	margin-bottom: 0;
+}
+
+input[type="submit"] {
+  background-color: #64a6bf;
+  color: #fff;
+  border: #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #55899c;
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <title>Uni Trade - Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="normalize" type="text/css" href="css/normalize.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="assets/brighton-logo-square.jpg">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="assets/brighton-logo-square.jpg" alt="University of Brighton logo" /></a>
+        <div id="banner">
+            <h1>Uni Trade</h1>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+			<input
+			  type="search"
+			  aria-label="Item search"
+			  class="input"
+			  placeholder="Search for an item..."
+			  id="search-bar"
+			/>
+			<button id="search-btn">
+			  <img src="assets/search.svg" alt="Search" />
+			  Search
+			</button>
+			<div class="dropdown">
+			  <button id="dropdown-btn">
+				<img src="assets/menu.svg" alt="Menu" />
+				Menu
+			  </button>
+			  <div id="dropdown-menu" class="">
+				<a href="index.html">Home</a>
+				<a href="sell.html">Sell</a>
+			  </div>
+			</div>
+		  </div>
+
+          <section class="cards">
+			<div class="card">
+				<h2 id="itemName"></h2>
+                <div id="itemImage"></div>
+				<h2 id="itemPrice"></h2>
+				<p id="sellerName"></p>
+				<p class="profile-rating">
+					User Rating:
+					<span class="stars"><span id="itemRating"></span></span>
+            	<p id="itemLocation"></p>
+                <p>------------------------------------------</p>
+            	<p><i id="itemInfo"></i></p>
+                <p>------------------------------------------</p>
+                <p>Contact the Seller:</p>
+                <p id="sellerPhone"></p>
+                <br>
+                <a href="item.html" class="proceed-buy-item">Proceed to buy item...</a>
+			</div>
+        </section>
+
+        <a href="index.html" class="go-back">Go Back</a>
+
+	</main>
+	<script src="./javascript/menu.js"></script>
+</body>
+</html>

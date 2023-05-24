@@ -103,12 +103,12 @@ header img {
   color: #fff;
 }
 
-.cards {
+/* .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 50px;
-}
+} */
 
 .card {
   background-color: #7bc6df;

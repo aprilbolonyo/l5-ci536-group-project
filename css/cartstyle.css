@@ -98,6 +98,13 @@
   form input[type="submit"]:hover {
     background-color: #64a6bf;
   }
+  #paypal-button-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 90%;
+    gap: 30px;
+  }
 
   .thank-you-message {
     position: fixed;

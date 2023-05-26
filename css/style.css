@@ -146,6 +146,8 @@ header img {
   height: auto;
   max-width: 100%;
   display: block;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 .card p {
@@ -261,7 +263,7 @@ MESSING AROUND WITH THE CARD DISPLAY */
 	margin-bottom: 0;
 }
 
-input[type="submit"] {
+button {
   background-color: #64a6bf;
   color: #fff;
   border: #000000;
@@ -271,7 +273,37 @@ input[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
+button :hover {
   background-color: #55899c;
 }
 
+a.proceed-buy-item {
+  background-color: #64a6bf;
+  color: #fff;
+  border: #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+a.proceed-buy-item:hover {
+  background-color: #55899c;
+}
+
+a.go-back {
+  background-color: #64a6bf;
+  color: #fff;
+  border: #000000;
+  padding: 10px 20px;
+  font-size: 20px;
+  position: fixed;
+  bottom: 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+a.go-back:hover {
+  background-color: #55899c;
+}

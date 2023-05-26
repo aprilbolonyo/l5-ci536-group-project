@@ -6,6 +6,12 @@ window.addEventListener("load", function () {
   dropdownBtn.addEventListener("click", function () {
     dropdownMenu.classList.toggle("hide");
   });
+  
+  window.addEventListener("click", function(event) {
+    if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.add("hide");
+    }
+});
 });
 
 // Searchbar:

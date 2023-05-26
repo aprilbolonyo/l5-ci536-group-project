@@ -6,20 +6,12 @@ window.addEventListener("load", function () {
   dropdownBtn.addEventListener("click", function () {
     dropdownMenu.classList.toggle("hide");
   });
-<<<<<<< HEAD
   
   window.addEventListener("click", function(event) {
     if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
         dropdownMenu.classList.add("hide");
     }
 });
-=======
-  window.addEventListener("click", function(event) {
-        if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.add("hide");
-        }
-    });
->>>>>>> 7a9a8974e0bb34958edd079942cfa028604c193f
 });
 
 // Searchbar:

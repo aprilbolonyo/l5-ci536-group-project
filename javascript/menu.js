@@ -76,3 +76,19 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('header');
+  var logo = header.querySelector('img');
+  var heading = header.querySelector('h1');
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > 0) {
+    header.classList.add('shrink');
+    logo.classList.add('shrink');
+    heading.classList.add('shrink');
+  } else {
+    header.classList.remove('shrink');
+    logo.classList.remove('shrink');
+    heading.classList.remove('shrink');
+  }
+});

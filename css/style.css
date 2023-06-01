@@ -245,7 +245,7 @@ header.shrink #banner h1 {
 
 .stars {
   font-size: 24px;
-  color: rgb(188, 170, 69);
+  color: black;
 }
 
 .items-sold {
@@ -295,7 +295,7 @@ MESSING AROUND WITH THE CARD DISPLAY */
 
 button {
   background-color: #64a6bf;
-  color: #fff;
+  color: #000;
   border: #000000;
   padding: 10px 20px;
   cursor: pointer;

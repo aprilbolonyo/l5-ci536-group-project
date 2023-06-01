@@ -348,6 +348,10 @@ footer a:link {
   color: #fff;
 }
 a:hover {
+  color: #0765fc;
   text-decoration: underline;
   text-shadow: 2px 2px 5px black;
+}
+footer a {
+  color: #fff;
 }

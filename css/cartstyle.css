@@ -214,7 +214,10 @@ header.shrink #banner h1 {
     color: #fff;
   }
   a:hover {
-    color: #fc0707;
+    color: #0765fc;
     text-decoration: underline;
     text-shadow: 2px 2px 5px black;
+  }
+  footer a {
+    color: #fff;
   }

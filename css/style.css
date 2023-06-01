@@ -308,7 +308,27 @@ button {
 button:hover {
   background-color: #55899c;
 }
-
+#backToLogin{
+  margin-top: 40px;
+  margin-right: 20px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #3c3c3cdf;
+  color: #fff;
+  border: #000000;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+header.shrink #backToLogin {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-right: 2px;
+  scale: 0.8;
+}
 a.proceed-buy-item {
   background-color: #3c3c3cdf;
   color: #fff;

@@ -16,9 +16,10 @@ window.addEventListener("load", function () {
 
 // Searchbar:
 const searchBar = document.getElementById('search-bar');
+const searchBtn = document.getElementById('search-btn');
 const cards = document.querySelectorAll('.card');
 
-searchBar.addEventListener('keyup', () => {
+searchBtn.addEventListener('click', () => {
   const searchText = searchBar.value.toLowerCase();
   cards.forEach(card => {
     const cardText = card.textContent.toLowerCase();

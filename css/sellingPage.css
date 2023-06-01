@@ -103,13 +103,6 @@ header img {
   color: #fff;
 }
 
-/* .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
-} */
-
 .card {
   background-color: #7bc6df;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -170,7 +163,7 @@ header img {
   }
 }
 
-Additional styles for the profile page
+/* Additional styles for the profile page */
 .profile {
   display: flex;
   flex-direction: column;

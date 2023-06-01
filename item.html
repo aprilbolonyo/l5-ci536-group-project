@@ -62,42 +62,40 @@
       </form>
 
       <div id="paypal-button-container"></div>
-
+      <button id="cash-button">Pay with Cash</button>
+      
       <script src="https://www.paypal.com/sdk/js?client-id=AU-RgqQCS6L9X8K9ARffqy2exPrHByegNOqT9Fm3ihXz8GJlZyK0KlMrUyYHue4EAudQHpxM5XEVxKBw"></script>
       <script>
-        document
-          .getElementById("shipping-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-        
-          });
-
-        paypal
-          .Buttons({
-            createOrder: function (data, actions) {
-             
-              return actions.order.create({
-                purchase_units: [
-                  {
-                    amount: {
-                      value: "0.02",
-                    },
+        document.getElementById("shipping-form").addEventListener("submit", function (event) {
+          event.preventDefault();
+        });
+      
+        paypal.Buttons({
+          createOrder: function (data, actions) {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: "0.02",
                   },
-                ],
-              });
-            },
-            onApprove: function (data, actions) {
-             
-              return actions.order.capture().then(function (details) {
-                console.log(details);
-                  // thank you message?? 
-                  // email receipt? 
-              });
-            },
-          })
-          .render("#paypal-button-container");
+                },
+              ],
+            });
+          },
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+              console.log(details);
+              // thank you message??
+              // email receipt?
+            });
+          },
+        }).render("#paypal-button-container");
+      
+        document.getElementById("cash-button").addEventListener("click", function () {
+          // Handle cash payment logic here
+          console.log("Cash payment initiated");
+          // Display thank you message or any other necessary actions
+        });
       </script>
-      </div>
-    </div>
   </body>
 </html>

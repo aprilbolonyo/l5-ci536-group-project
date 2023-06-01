@@ -111,7 +111,6 @@ button {
   transition: background-color 0.3s ease;
 }
 
-
 #dropdown-menu {
   position: fixed;
   z-index: 1;
@@ -182,7 +181,20 @@ button {
 .hide {
   display: none;
 }
-
+footer {
+  color: #fff;
+  background: #555;
+  padding: 0.5em 0em 1em 0.5em;
+  text-align: center;
+}
+footer a:link {
+  color: #fff;
+}
+a:hover {
+  color: #fc0707;
+  text-decoration: underline;
+  text-shadow: 2px 2px 5px black;
+}
 @media (max-width: 35em) {
   .card {
     width: 90%;

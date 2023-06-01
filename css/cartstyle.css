@@ -204,3 +204,17 @@ header.shrink #banner h1 {
     background-color: #7bc6df;
     color: #fff;
   }
+  footer {
+    color: #fff;
+    background: #555;
+    padding: 0.5em 0em 1em 0.5em;
+    text-align: center;
+  }
+  footer a:link {
+    color: #fff;
+  }
+  a:hover {
+    color: #fc0707;
+    text-decoration: underline;
+    text-shadow: 2px 2px 5px black;
+  }

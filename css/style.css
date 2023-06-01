@@ -195,6 +195,16 @@ header.shrink #banner h1 {
     width: 40%;
   }
 }
+@media (max-width: 460px) {
+   .cards {
+	margin-top: 30px;
+   }
+   .card {
+	margin: 10px;
+	width: 90%;
+	}
+    }
+}
 
 /* Additional styles for the profile page */
 .profile {

@@ -55,7 +55,8 @@ header.shrink #banner h1 {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: left;
-  margin-left: 20px;;
+  margin-left: 20px;
+  ;
 }
 
 .wrapper {
@@ -67,157 +68,185 @@ header.shrink #banner h1 {
   position: relative;
 }
 
-  .container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-  }
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
 
-  h1, h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
 
-  .hide {
-    display: none;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-  }
+.hide {
+  display: none;
+}
 
-  form input[type="text"],
-  form input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
 
-  form input[type="submit"] {
-    background-color: #7bc6df;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
 
-  form input[type="submit"]:hover {
-    background-color: #64a6bf;
-  }
-  #paypal-button-container {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    width: 90%;
-    gap: 0px;
-  }
+form input[type="submit"] {
+  background-color: #7bc6df;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
-  .thank-you-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    color: #333;
-  }
+form input[type="submit"]:hover {
+  background-color: #64a6bf;
+}
 
-  .wrapper {
-    width: 100%;
-    padding: 30px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 15px 20px;
-    max-width: 400px;
-    height: 50px;
-    border: none;
-    background-color: #f2f2f2;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: text;
-    outline: none;
-  }
-  
-  #dropdown-btn,
-  #search-btn {
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 50px;
+#paypal-button-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 90%;
+  gap: 0px;
+}
+
+.thank-you-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 15px 20px;
+  max-width: 400px;
+  height: 50px;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: text;
+  outline: none;
+}
+
+#dropdown-btn,
+#search-btn {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 50px;
     height: 50px; */
-    min-width: 4rem;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    font-size: 0;
-    margin-left: 10px;
+  min-width: 4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  margin-left: 10px;
+}
+
+#search-btn img,
+#dropdown-btn img {
+  width: 70%;
+  height: auto;
+}
+
+#dropdown-menu {
+  position: fixed;
+  z-index: 1;
+  margin-left: 15px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+#dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+#dropdown-menu a:hover {
+  background-color: #7bc6df;
+  color: #fff;
+}
+
+footer {
+  color: #fff;
+  background: #555;
+  padding: 0.5em 0em 1em 0.5em;
+  text-align: center;
+}
+
+footer a:link {
+  color: #fff;
+}
+
+a:hover {
+  color: #0765fc;
+  text-decoration: underline;
+  text-shadow: 2px 2px 5px black;
+}
+
+footer a {
+  color: #fff;
+}
+
+@media (max-width: 35em) {
+  #container {
+    width: 90%;
   }
-  
-  #search-btn img,
-  #dropdown-btn img {
-    width: 70%;
-    height: auto;
+}
+
+@media (max-width: 60em) {
+  #container {
+    width: 90%;
   }
-  
-  #dropdown-menu {
-    position: fixed;
-    z-index: 1;
-    margin-left: 15px;
-    width: 200px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+}
+
+@media (max-width: 460px) {
+  #container {
+    margin-top: 30px;
   }
-  
-  #dropdown-menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
+
+  #container {
+    margin: 10px;
+    width: 90%;
   }
-  
-  #dropdown-menu a:hover {
-    background-color: #7bc6df;
-    color: #fff;
-  }
-  footer {
-    color: #fff;
-    background: #555;
-    padding: 0.5em 0em 1em 0.5em;
-    text-align: center;
-  }
-  footer a:link {
-    color: #fff;
-  }
-  a:hover {
-    color: #0765fc;
-    text-decoration: underline;
-    text-shadow: 2px 2px 5px black;
-  }
-  footer a {
-    color: #fff;
-  }
+}

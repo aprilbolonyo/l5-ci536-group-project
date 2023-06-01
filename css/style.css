@@ -188,11 +188,17 @@ header.shrink #banner h1 {
   .card {
     width: 90%;
   }
+  .form {
+    width: 90%;
+  }
 }
 
 @media (max-width: 60em) {
   .card {
     width: 40%;
+  }
+  .form {
+    width: 80%;
   }
 }
 @media (max-width: 460px) {
@@ -203,6 +209,9 @@ header.shrink #banner h1 {
 	margin: 10px;
 	width: 90%;
 	}
+  .form {
+    width: 90%;
+  }
     }
 
 /* Additional styles for the profile page */
